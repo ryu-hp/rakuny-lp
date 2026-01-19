@@ -1,0 +1,106 @@
+@use "sass:math";
+
+// ブレイクポイント
+$breakpoints: (
+  md: 800,
+  lg: 959,
+);
+
+// メディアクエリー
+$mediaquerys: (
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+// 単位を除去
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}
+
+// vw換算
+@function vw($window_width, $font_size) {
+  @return math.div($font_size, $window_width) * 100vw;
+}
+
+// フォントファミリー, "", 
+$base-font-family:   "Noto Sans JP", sans-serif;
+$second-font-family: "Zen Maru Gothic", sans-serif;
+
+// フォントウェイト
+$w-black : 900;
+$bold : 700;
+$medium : 500;
+$normal : 400;
+$light : 300;
+
+// カラーパレット
+$color-black: #222;
+$color-white: #ffffff;
+// プライマリーブルー（テーマカラー）
+$color-theme: #008F54;
+// アクセントレッド
+$color-brown: #53280D;
+// 背景黄色
+$color-yellow: #FFF07D;
+// 橙色
+$color-orange: #F94204;
+// 背景緑
+$color-green-bg: #F3F3EA;
+// テキスト橙色
+$color-orange-text: #Ff7D00;
+// テキスト用メイングレー
+$color-main_gray: #000;
+// 背景緑
+$color-bg_green: rgba(160, 218, 40, 0.20);
+// Googleマップボタン用から
+$color-lp2-btn-map: linear-gradient(180deg, #F1B724 0%, #B47100 100%);
+// LINEボタン用から
+$color-lp2-btn-line:  linear-gradient(180deg, #A3D402 0%, #1EBA04 100%);
+// 電話ボタン用から
+$color-lp2-btn-tel: linear-gradient(180deg, #FAC921 6.25%, #F94204 76.92%);
+
+// レイアウト幅
+$inner: 760px;
+$maxwidth: 760;
+
+// パディング設定
+$padding-pc: 20px;
+$padding-sp: calc(44 / 800 * 100vw);
+
+// ————————————————————————
+// グラデーション定義
+
+// 背景用グラデーション（セクション）
+$gradient-bg-section: linear-gradient(
+  0deg,
+  rgba(223,235,250,0) 0%,
+  rgba(223,235,250,1) 100%
+);
+
+// “エンジニア”テキスト用グラデーション（水平方向）
+$gradient-text-engineer: linear-gradient(
+  72deg,
+  rgba(223,235,250,0) 0%,
+  rgba(223,235,250,1) 100%
+);
+// テーマ共通グラデーション（90度）
+$gradient-freedge: linear-gradient(
+  90deg,
+  #1056AB 0%,
+  #007EE5 100%
+);
