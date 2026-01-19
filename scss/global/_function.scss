@@ -61,18 +61,6 @@ $color-yellow: #FFF07D;
 $color-orange: #F94204;
 // 背景緑
 $color-green-bg: #F3F3EA;
-// テキスト橙色
-$color-orange-text: #Ff7D00;
-// テキスト用メイングレー
-$color-main_gray: #000;
-// 背景緑
-$color-bg_green: rgba(160, 218, 40, 0.20);
-// Googleマップボタン用から
-$color-lp2-btn-map: linear-gradient(180deg, #F1B724 0%, #B47100 100%);
-// LINEボタン用から
-$color-lp2-btn-line:  linear-gradient(180deg, #A3D402 0%, #1EBA04 100%);
-// 電話ボタン用から
-$color-lp2-btn-tel: linear-gradient(180deg, #FAC921 6.25%, #F94204 76.92%);
 
 // レイアウト幅
 $inner: 760px;
@@ -80,27 +68,7 @@ $maxwidth: 760;
 
 // パディング設定
 $padding-pc: 20px;
-$padding-sp: calc(44 / 800 * 100vw);
+$padding-sp: 1.25rem;
 
 // ————————————————————————
 // グラデーション定義
-
-// 背景用グラデーション（セクション）
-$gradient-bg-section: linear-gradient(
-  0deg,
-  rgba(223,235,250,0) 0%,
-  rgba(223,235,250,1) 100%
-);
-
-// “エンジニア”テキスト用グラデーション（水平方向）
-$gradient-text-engineer: linear-gradient(
-  72deg,
-  rgba(223,235,250,0) 0%,
-  rgba(223,235,250,1) 100%
-);
-// テーマ共通グラデーション（90度）
-$gradient-freedge: linear-gradient(
-  90deg,
-  #1056AB 0%,
-  #007EE5 100%
-);
