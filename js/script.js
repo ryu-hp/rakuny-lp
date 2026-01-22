@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ビデオの再生コントロール
+  const video = document.getElementById('promo-video');
+  if (video) {
+    video.addEventListener('click', function() {
+      if (this.paused) {
+        this.play();
+      } else {
+        this.pause();
+      }
+    });
+  }
+
   // スムーズスクロール
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
