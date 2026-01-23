@@ -213,13 +213,13 @@
           ムダな確認・移動を減らし、<span class="highlight">「即対応」で回る体制へ</span>
         </h2>
       </div>
-      <p class="cta-main__description">
-        <span class="cta-main__description--icon"><img src="/images/tabler_clock.webp" alt="最短1分でお問い合わせ完了"></span>
-        <span class="cta-main__description--text">最短1分でお問い合わせ完了!</span>
+      <p class="main-cta__description">
+        <span class="main-cta__description--icon"><img src="/images/tabler_clock.webp" alt="最短1分でお問い合わせ完了"></span>
+        <span class="main-cta__description--text">最短1分でお問い合わせ完了!</span>
       </p>
-      <div class="cta-main__columns">
-        <div class="cta-main__btn-contents">
-          <div class="cta-main__btn">
+      <div class="main-cta__columns">
+        <div class="main-cta__btn-contents">
+          <div class="main-cta__btn">
             <a href="#demo" class="btn btn--demo-cta">
               <div class="btn-icon">
                 <img src="/images/sryou-1-white.webp" alt="送るアイコン">
@@ -229,7 +229,7 @@
               </div>
             </a>
           </div>
-          <div class="cta-main__btn">
+          <div class="main-cta__btn">
             <a href="#contact" class="btn btn--mail-cta">
               <div class="btn-icon">
                 <img src="/images/mail-icon-white.webp" alt="メールアイコン">
@@ -240,9 +240,9 @@
             </a>
           </div>
         </div>
-        <div class="cta-main__movies">
-          <p class="cta-main__movie-copy">プレゼント動画の一部を紹介</p>
-          <div class="cta-main__movie">
+        <div class="main-cta__movies">
+          <p class="main-cta__movie-copy">プレゼント動画の一部を紹介</p>
+          <div class="main-cta__movie">
             <video id="promo-video" src="/movie/short-movie.mp4" muted playsinline></video>
           </div>
         </div>
@@ -292,6 +292,11 @@
                   <p class="service-item__description">
                     工事予定だけでなく<span class="service-item__description--block">案件情報</span><span class="service-item__description--block">許可</span><span class="service-item__description--block">人員</span>を一画面で統合管理できる<span class="service-item__description--strong">“段取りの司令塔”</span>です。
                   </p>
+                  <ul class="service-item__list">
+                    <li class="service-item__list-item">工事名・住所・工種・担当者・協力会社・図面資料を案件単位で登録し見える化</li>
+                    <li class="service-item__list-item">協力会社も案件を確認して予定を組めるため、電話確認や二重入力を削減</li>
+                    <li class="service-item__list-item">急な緊急工事でも「誰が空いているか」を判断でき、<br>采配スピードがUP</li>
+                  </ul>
                 </div>
               </div>
               <div class="service-item__image">
@@ -299,92 +304,259 @@
               </div>
             </div>
           </div>
+          <div class="service__item service-item">
+            <div class="service-item__columns">
+              <div class="service-item__text">
+                <div class="service-item__head">
+                  <h3 class="service-item__head-title">現場マップ機能</h3>
+                  <div class="service-item__head-bg-text">
+                    <img src="/images/map-text.webp" alt="map">
+                  </div>
+                </div>
+                <div class="service-item__body">
+                  <p class="service-item__description">
+                    RAKUNYのマップ機能は、今日の<span class="service-item__description--block">現場</span><span class="service-item__description--block">予定案件</span><span class="service-item__description--block">受注案件</span>を地図上に一覧化し、<span class="service-item__description--strong">「どこで何が動いているか」を一目で把握できる機能</span>です。
+                  </p>
+                  <ul class="service-item__list">
+                    <li class="service-item__list-item">協力会社別に色分けし、現場に近い会社へ割り振るなど配車・人員の最適化を支援</li>
+                    <li class="service-item__list-item">資材置き場や協力会社拠点も登録でき、移動のムダや残業の削減</li>
+                    <li class="service-item__list-item">掘削時の湧水量・土質・舗装厚・管体情報を地図に蓄積し、周辺の過去データ（半径200m）を参照可能</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-item__image">
+                <img src="/images/system-map-image.webp" alt="現場マップ機能のイメージ画像">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="service__columns">
-          <div class="service__column service-card">
-            <div class="service-card__icon">
-              <img src="/images/function-icon-01.webp" alt="カレンダー・マップ機能">
+        <div class="service__bottom-contents">
+          <div class="service__bottom-columns">
+            <div class="service__bottom-column service-bottom-card">
+              <p class="service-bottom-card__title">案件詳細管理</p>
+              <div class="service-bottom-card__icon">
+                <img src="/images/other-system-icon-01.webp" alt="案件詳細管理">
+              </div>
             </div>
-            <h3 class="service-card__title">カレンダー・マップ機能</h3>
-            <p class="service-card__description">
-              全ての施工をカレンダーとMAPで一覧化。人員配置や許可の状況も一目で把握でき、段取りの精度が向上します。
-            </p>
-          </div>
-  
-          <div class="service__column service-card">
-            <div class="service-card__icon">
-              <img src="/images/function-icon-02.webp" alt="情報共有機能">
+            <div class="service__bottom-column service-bottom-card">
+              <p class="service-bottom-card__title">工事情報共有</p>
+              <div class="service-bottom-card__icon">
+                <img src="/images/other-system-icon-02.webp" alt="工事情報共有">
+              </div>
             </div>
-            <h3 class="service-card__title">情報共有機能</h3>
-            <p class="service-card__description">
-              発注書の管理や利用許可の申請状態など、施工に必要なやり取りや契約はすべてシステム内で管理可能です。
-            </p>
-          </div>
-  
-          <div class="service__column service-card">
-            <div class="service-card__icon">
-              <img src="/images/function-icon-03.webp" alt="タスク管理機能">
+            <div class="service__bottom-column service-bottom-card">
+              <p class="service-bottom-card__title">チャット機能</p>
+              <div class="service-bottom-card__icon">
+                <img src="/images/other-system-icon-03.webp" alt="チャット機能">
+              </div>
             </div>
-            <h3 class="service-card__title">タスク管理機能</h3>
-            <p class="service-card__description">
-              各施工毎で詳細情報を見える化します。それぞれで、現在の情報ややり取り、契約書など全てを管理できます。
-            </p>
+            <div class="service__bottom-column service-bottom-card">
+              <p class="service-bottom-card__title">出退勤管理</p>
+              <div class="service-bottom-card__icon">
+                <img src="/images/other-system-icon-04.webp" alt="出退勤管理">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section section--sub-cta">
+    <div class="sub-cta__container container">
+      <div class="sub-cta__image">
+        <img src="/images/rakuny-mobile-image.webp" alt="スマホ画面">
+      </div>
+      <p class="sub-cta__main-copy">他にも様々な機能があります！</p>
+      <div class="sub-cta__btn-contents">
+        <p class="sub-cta__btn-micro-copy">まずは動画で確認してみてください</p>
+        <div class="sub-cta__btn">
+          <a href="#demo" class="btn btn--demo-sub-cta">
+            <div class="btn-icon">
+              <img src="/images/sryou-1-white.webp" alt="送るアイコン">
+            </div>
+            <span class="btn__text">デモ動画を受け取る</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--value">
+    <div class="value__container container">
+      <h2 class="value__title section__title section__title--line"><span class="service__title--logo"><img src="/images/rakuny-logo-text.webp" alt="rakuny"></span>を導入した実際の効果</h2>
+      <div class="value__body">
+        <div class="value__item value-item">
+          <div class="value-item__head">
+            <div class="value-item__head-icon">
+              <img src="/images/paragragh-icon-01.webp" alt="売上成長と利益体質の強化">
+            </div>
+            <h3 class="value-item__head-title">売上成長と利益体質の強化</h3>
+          </div>
+          <div class="value-item__body">
+            <div class="value-item__columns">
+              <div class="value-item__paragragh">
+                <img src="/images/paragragh-image-01.webp" alt="売上成長と利益体質の強化">
+              </div>
+              <div class="value-item__text">
+                <p class="value-item__description">
+                  RAKUNYで工事・許可・人員・資料・実績を案件単位で一元管理し、現場と事務、協力会社まで同じ情報を共有できる状態を構築。<br><br>
+                  電話確認や調整の往復、探し物、割り振りミスを減らし、<span class="value-item__description--accent">「その場で即答できる」スピード</span>が信頼と受注機会の増加につながりました。<br><br>
+                  段取りの精度が上がることで手戻りやムダな移動も減り、現場の回転が改善。結果として<span class="value-item__description--accent">売上は5年間で大きく伸長し、利益体質の強化（過去最高益）</span>にも結びつきました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="value__item value-item">
+          <div class="value-item__head">
+            <div class="value-item__head-icon">
+              <img src="/images/paragragh-icon-02.webp" alt="残業削減と休日増（働き方改革）">
+            </div>
+            <h3 class="value-item__head-title">残業削減と休日増（働き方改革）</h3>
+          </div>
+          <div class="value-item__body">
+            <div class="value-item__paragragh value-item__paragragh--width">
+              <img src="/images/paragragh-image-02.webp" alt="残業削減と休日増（働き方改革）">
+            </div>
+            <div class="value-item__text value-item__text--width">
+              <p class="value-item__description">
+                RAKUNY導入により、案件情報がカレンダーとMAPに集約され、<br>
+                現場・事務・協力会社の<span class="value-item__description--accent">「確認」や「調整」の回数が大幅に減少。</span><br><br>
+                さらに、誰がどこで稼働しているかを一覧で把握できるため、人員配置の無理や手配の遅れが減り、突発対応でも混乱しにくい運用に。<br>
+                結果として、以前は月60〜70時間発生していた残業が、現在は月約10時間まで削減。<br>
+                <span class="value-item__description--accent">年間休日も80日から110日へ増加</span>し、稼ぎと休みの両立を実現しました。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="value__item value-item">
+          <div class="value-item__head">
+            <div class="value-item__head-icon">
+              <img src="/images/paragragh-icon-03.webp" alt="苦情・トラブルの激減">
+            </div>
+            <h3 class="value-item__head-title">苦情・トラブルの激減</h3>
+          </div>
+          <div class="value-item__body">
+            <div class="value-item__columns">
+              <div class="value-item__paragragh">
+                <img src="/images/paragragh-image-03.webp" alt="苦情・トラブルの激減">
+              </div>
+              <div class="value-item__text">
+                <p class="value-item__description">
+                  AKUNYの案件単位の情報集約により、<span class="value-item__description--accent">伝達漏れや<br>
+                  「言った言わない」、現場判断の迷い</span>が減少。<br><br>
+                  許可の見える化と通知で段取りミスを抑え、協力会社とも同じ情報を共有できるため、現場の行き違いが起きにくい体制になりました。<br>
+                  結果として、以前は<span class="value-item__description--bold">代表が年4〜5回謝罪</span>に行く必要があったトラブルが、導入後<span class="value-item__description--accent" >5年間でわずか1回</span>まで減少。<br><br>
+                  1,000現場を回しても責任者が謝罪に行くのは年1回あるかないかというレベルまで改善し、対外対応コストとストレスを大きく削減しました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="second-cta">
+    <div class="second-cta__container container">
+      <div class="second-cta__head">
+        <p class="second-cta__head-sub">
+          施工の情報を一箇所に集約
+        </p>
+        <h2 class="second-cta__title">
+          ムダな確認・移動を減らし、<span class="highlight">「即対応」で回る体制へ</span>
+        </h2>
+      </div>
+      <p class="second-cta__description">
+        <span class="second-cta__description--icon"><img src="/images/tabler_clock.webp" alt="最短1分でお問い合わせ完了"></span>
+        <span class="second-cta__description--text">最短1分でお問い合わせ完了!</span>
+      </p>
+      <div class="second-cta__btn-contents">
+        <div class="second-cta__btn">
+          <p class="second-cta__btn-hukidashi">
+            <span class="second-cta__btn-hukidashi-text"><span class="orenge">3分</span>で全体像がわかる</span>
+          </p>
+          <a href="#demo" class="btn btn--demo-cta">
+            <div class="btn-icon">
+              <img src="/images/sryou-1-white.webp" alt="送るアイコン">
+            </div>
+            <span class="btn__text">デモ動画を受け取る</span>
+            <div class="btn-arrow"> 
+            </div>
+          </a>
+        </div>
+        <div class="second-cta__btn">
+          <p class="second-cta__btn-hukidashi">
+            <span class="second-cta__btn-hukidashi-text">自社専用の<span class="green">活用例</span>を聞く</span>
+          </p>
+          <a href="#contact" class="btn btn--mail-cta">
+            <div class="btn-icon">
+              <img src="/images/mail-icon-white.webp" alt="メールアイコン">
+            </div>
+            <span class="btn__text">無料で相談する</span>
+            <div class="btn-arrow"> 
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="second-cta__image">
+        <img src="/images/cta-woman-image.webp" alt="女性の画像">
+      </div>
+    </div>
+  </section>
+
+
   <!-- Section: 導入フロー -->
   <section class="section section--flow">
     <div class="flow__container container">
-      <h2 class="flow__title section__title section__title--line">導入・運用の<span class="highlight">流れ</span></h2>
-      
+      <h2 class="flow__title section__title">導入・運用の<span class="highlight">流れ</span></h2>
       <div class="flow__body">
-        <div class="flow__line"></div>
-        
-        <div class="flow-step">
-          <div class="flow-step__number">
-            <span class="flow-step__label">STEP</span>
-            <span class="flow-step__num">01</span>
+        <div class="flow__columns">
+          <div class="flow-step">
+            <div class="flow-step__number">
+              <span class="flow-step__label">step</span>
+              <span class="flow-step__num">01</span>
+            </div>
+            <div class="flow-step__content">
+              <h3 class="flow-step__title">お問い合わせ</h3>
+              <p class="flow-step__description">お問い合わせ・動画請求<br>フォームから問い合わせる</p>
+            </div>
           </div>
-          <div class="flow-step__content">
-            <h3 class="flow-step__title">お問い合わせ</h3>
-            <p class="flow-step__description">お問い合わせ・動画請求<br>フォームから問い合わせる</p>
+  
+          <div class="flow-step">
+            <div class="flow-step__number">
+              <span class="flow-step__label">step</span>
+              <span class="flow-step__num">02</span>
+            </div>
+            <div class="flow-step__content">
+              <h3 class="flow-step__title">説明</h3>
+              <p class="flow-step__description">課題や工種をカンタンに確認し、<br>運用フローを説明します。</p>
+            </div>
           </div>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__number">
-            <span class="flow-step__label">STEP</span>
-            <span class="flow-step__num">02</span>
+  
+          <div class="flow-step">
+            <div class="flow-step__number">
+              <span class="flow-step__label">step</span>
+              <span class="flow-step__num">03</span>
+            </div>
+            <div class="flow-step__content">
+              <h3 class="flow-step__title">導入サポート</h3>
+              <p class="flow-step__description">権限設定など貴社の体制に合わ<br>せて設定・伴走をします。</p>
+            </div>
           </div>
-          <div class="flow-step__content">
-            <h3 class="flow-step__title">説明</h3>
-            <p class="flow-step__description">課題や工種をカンタンに確認し、<br>運用フローを説明します。</p>
+  
+          <div class="flow-step">
+            <div class="flow-step__number">
+              <span class="flow-step__label">step</span>
+              <span class="flow-step__num">04</span>
+            </div>
+            <div class="flow-step__content">
+              <h3 class="flow-step__title">活動開始</h3>
+              <p class="flow-step__description">日頃の業務をシステムに移行<br>していき、業務改善を行います。</p>
+            </div>
           </div>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__number">
-            <span class="flow-step__label">STEP</span>
-            <span class="flow-step__num">03</span>
-          </div>
-          <div class="flow-step__content">
-            <h3 class="flow-step__title">導入サポート</h3>
-            <p class="flow-step__description">権限設定など貴社の体制に合わ<br>せて設定・伴走をします。</p>
-          </div>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__number">
-            <span class="flow-step__label">STEP</span>
-            <span class="flow-step__num">04</span>
-          </div>
-          <div class="flow-step__content">
-            <h3 class="flow-step__title">活動開始</h3>
-            <p class="flow-step__description">日頃の業務をシステムに移行<br>していき、業務改善を行います。</p>
-          </div>
+          <div class="flow__line"></div>
         </div>
       </div>
     </div>
@@ -392,47 +564,126 @@
 
   <!-- Section: FAQ -->
   <section class="section section--faq">
-    <div class="container">
-      <h2 class="section__title section__title--line">よくあるご質問</h2>
-      
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-item__question">
-            <span class="faq-item__q">Q</span>
-            <span class="faq-item__text">システムが苦手でも本当に使えますか？</span>
-            <span class="faq-item__toggle">+</span>
+    <div class="faq__container container">
+      <h2 class="faq__title section__title">よくあるご質問</h2>
+      <div class="faq__body">
+        <div class="faq__contents">
+          <div class="faq-item">
+            <div class="faq-item__question">
+              <span class="faq-item__icon faq-item__icon--q">Q</span>
+              <p class="faq-item__text">システムが苦手でも本当に使えますか？</p>
+              <span class="faq-item__toggle"><span class="faq-item__toggle-signal"></span></span>
+            </div>
+            <div class="faq-item__answer">
+              <span class="faq-item__icon faq-item__icon--a">A</span>
+              <p class="faq-item__text">
+                はい。業種は関係なく使えます。実際に私たちの協力会社などは〇〇、〇〇なども興味を示し、<br>
+                活用を始めております。
+              </p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <div class="faq-item__question">
+              <span class="faq-item__icon faq-item__icon--q">Q</span>
+              <p class="faq-item__text">使いこなせなかった人はいますか？</p >
+              <span class="faq-item__toggle"><span class="faq-item__toggle-signal"></span></span>
+            </div>
+            <div class="faq-item__answer">
+              <span class="faq-item__icon faq-item__icon--a">A</span>
+              <p class="faq-item__text">
+                これまでの運用の中で、使えなくて止まってしまったケースはありません。最初から完璧を求めず、「まずはカレンダーとMAPから」など、現場の負担が少ない範囲で段階的に広げていく進め方ができます。
+              </p>
+            </div>  
+          </div>
+  
+          <div class="faq-item">
+            <div class="faq-item__question">
+              <span class="faq-item__icon faq-item__icon--q">Q</span>
+              <p class="faq-item__text">導入は大変じゃないですか？</p>
+              <span class="faq-item__toggle"><span class="faq-item__toggle-signal"></span></span>
+            </div>
+            <div class="faq-item__answer">
+              <span class="faq-item__icon faq-item__icon--a">A</span>
+              <p class="faq-item__text">
+                大変になりにくいように進められます。基本は ユーザー情報の登録と権限設定ができれば、運用を開始できます。現場が混乱しないように、最初は「見るだけ」「共有だけ」からスタートし、慣れてきたら入力範囲を広げる方法も可能です。
+              </p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <div class="faq-item__question">
+              <span class="faq-item__q">Q</span>
+              <span class="faq-item__text">タブレットやスマホがない現場でも使えますか？</span>
+              <span class="faq-item__toggle"><span class="faq-item__toggle-signal"></span></span>
+            </div>
+            <div class="faq-item__answer">
+              <span class="faq-item__icon faq-item__icon--a">A</span>
+              <p class="faq-item__text">
+                はい。現場での運用を想定し、タブレット支給などの運用設計も含めてご提案できます。端末の準備が不安な場合も、どの役割にどの端末が必要か（社長・事務・責任者・作業員）を整理して進めます。
+              </p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <div class="faq-item__question">
+              <span class="faq-item__q">Q</span>
+              <span class="faq-item__text">サポートはどこまでしてもらえますか？</span>
+              <span class="faq-item__toggle"><span class="faq-item__toggle-signal"></span></span>
+            </div>
+            <div class="faq-item__answer">
+              <span class="faq-item__icon faq-item__icon--a">A</span>
+              <p class="faq-item__text">
+                導入初期〜定着まで伴走します。現場用・事務用など、役割に合わせた使い方が分かるようにマニュアルを整備し、運用が回る形に落とし込みます。困ったときに聞ける体制も含めてご案内します。
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="faq-item">
-          <div class="faq-item__question">
-            <span class="faq-item__q">Q</span>
-            <span class="faq-item__text">使いこなせなかった人はいますか？</span>
-            <span class="faq-item__toggle">+</span>
+  <section class="main-cta">
+    <div class="main-cta__container container">
+      <div class="main-cta__head">
+        <p class="main-cta__head-sub">
+          施工の情報を一箇所に集約
+        </p>
+        <h2 class="main-cta__title">
+          ムダな確認・移動を減らし、<span class="highlight">「即対応」で回る体制へ</span>
+        </h2>
+      </div>
+      <p class="main-cta__description">
+        <span class="main-cta__description--icon"><img src="/images/tabler_clock.webp" alt="最短1分でお問い合わせ完了"></span>
+        <span class="main-cta__description--text">最短1分でお問い合わせ完了!</span>
+      </p>
+      <div class="main-cta__columns">
+        <div class="main-cta__btn-contents">
+          <div class="main-cta__btn">
+            <a href="#demo" class="btn btn--demo-cta">
+              <div class="btn-icon">
+                <img src="/images/sryou-1-white.webp" alt="送るアイコン">
+              </div>
+              <span class="btn__text">デモ動画を受け取る</span>
+              <div class="btn-arrow"> 
+              </div>
+            </a>
+          </div>
+          <div class="main-cta__btn">
+            <a href="#contact" class="btn btn--mail-cta">
+              <div class="btn-icon">
+                <img src="/images/mail-icon-white.webp" alt="メールアイコン">
+              </div>
+              <span class="btn__text">無料で相談する</span>
+              <div class="btn-arrow"> 
+              </div>
+            </a>
           </div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-item__question">
-            <span class="faq-item__q">Q</span>
-            <span class="faq-item__text">導入は大変じゃないですか？</span>
-            <span class="faq-item__toggle">+</span>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-item__question">
-            <span class="faq-item__q">Q</span>
-            <span class="faq-item__text">タブレットやスマホがない現場でも使えますか？</span>
-            <span class="faq-item__toggle">+</span>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-item__question">
-            <span class="faq-item__q">Q</span>
-            <span class="faq-item__text">サポートはどこまでしてもらえますか？</span>
-            <span class="faq-item__toggle">+</span>
+        <div class="main-cta__movies">
+          <p class="main-cta__movie-copy">プレゼント動画の一部を紹介</p>
+          <div class="main-cta__movie">
+            <video id="promo-video" src="/movie/short-movie.mp4" muted playsinline></video>
           </div>
         </div>
       </div>
@@ -441,14 +692,14 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer__container">
+    <div class="footer__container container">
       <div class="footer__logo">
         <img src="/images/rakuny_logo_fotter.webp" alt="RAKUNY">
       </div>
       <div class="footer__info">
         <p class="footer__address">〒710-0038 岡山県倉敷市新田2963-1</p>
-        <p class="footer__copyright">2023 ©︎RAKUNY inc. reserved</p>
       </div>
+      <p class="footer__copyright">2026 &copy; RAKUNY inc. reserved</p>
     </div>
   </footer>
 

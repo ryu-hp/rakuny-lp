@@ -14,6 +14,8 @@ html {
 
 * {
   letter-spacing: 0.05em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -210,17 +212,6 @@ div#main {
   display: none !important;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 120px;
-}
-@media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
-}
-
 .header {
   background: #FFFFFF;
   padding: 20px 0;
@@ -232,9 +223,6 @@ div#main {
 }
 
 .header__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,20 +233,11 @@ div#main {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 768px) {
-  .header__container {
-    padding: 0 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 16px;
-  }
-}
 
-.header__logo img {
-  height: 39px;
-  width: 223px;
+.header__logo {
+  max-width: 223px;
+  height: auto;
+  width: 100%;
 }
 
 .header__actions {
@@ -269,11 +248,7 @@ div#main {
 }
 @media (max-width: 768px) {
   .header__actions {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
+    display: none;
   }
 }
 
@@ -284,8 +259,10 @@ div#main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 9px;
-  padding: 12px 30px;
+  gap: 19px;
+  padding: 12px 10px;
+  max-width: 221px;
+  width: 100%;
   border-radius: 50px;
   font-weight: 700;
   font-size: 15px;
@@ -293,52 +270,38 @@ div#main {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__btn:hover {
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 .header__btn--demo {
   background: #FF9800;
   color: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-}
-
-.header__btn--demo:hover {
-  background: rgb(204, 121.6, 0);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #FF9800;
 }
 
 .header__btn--contact {
   background: #FFFFFF;
   color: #37474F;
   border: 2px solid #8BC34A;
-  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-}
-
-.header__btn--contact:hover {
-  background: rgba(139, 195, 74, 0.1);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .header__btn-icon {
-  width: 71px;
-  height: 71px;
-  position: absolute;
-  left: -17px;
-  top: -11px;
-  -webkit-filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  max-width: 31px;
 }
 
-.header__btn-icon-svg {
-  width: 31px;
-  height: 26px;
+.header__btn--demo .header__btn-icon {
+  max-width: 71px;
+  position: absolute;
+  left: -18px;
+  top: calc(50% - 3px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .section {
@@ -352,13 +315,25 @@ div#main {
 .section--solution {
   background: rgba(255, 152, 0, 0.1);
   position: relative;
-  padding-top: 0;
 }
 
 .section--about {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#FFFFFF));
-  background: linear-gradient(to bottom, #F5F5F5, #FFFFFF);
+  background: #FFFFFF;
   padding: 140px 0;
+}
+
+.section--services {
+  background: #FFFFFF;
+  padding: 90px 0 96px;
+}
+
+.section--value {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.16%, rgba(255, 152, 0, 0.08)), color-stop(99.84%, #FFF)), url(./images/paragragh-bg-image.webp) lightgray -897px 0px/224.583% 100% no-repeat, rgba(255, 184, 77, 0.2);
+  background: linear-gradient(0deg, rgba(255, 152, 0, 0.08) 0.16%, #FFF 99.84%), url(./images/paragragh-bg-image.webp) lightgray -897px 0px/224.583% 100% no-repeat, rgba(255, 184, 77, 0.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 0 96px;
 }
 
 .section--flow {

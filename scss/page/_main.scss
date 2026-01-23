@@ -1,18 +1,6 @@
 @use "../global" as *;
 
 
-
-// Container
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 120px;
-  
-  @media (max-width: 768px) {
-    padding: 0 20px;
-  }
-}
-
 // Header
 .header {
   background: $color-white;
@@ -24,85 +12,68 @@
 }
 
 .header__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  @media (max-width: 768px) {
-    padding: 0 20px;
-    flex-direction: column;
-    gap: 16px;
-  }
 }
 
-.header__logo img {
-  height: 39px;
-  width: 223px;
+.header__logo {
+  max-width: 223px;
+  height: auto;
+  width: 100%;
 }
 
 .header__actions {
   display: flex;
   gap: 16px;
-  
   @media (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
+    display: none;
   }
 }
 
 .header__btn {
   display: flex;
   align-items: center;
-  gap: 9px;
-  padding: 12px 30px;
+  gap: 19px;
+  padding: 12px 10px;
+  max-width: 221px;
+  width: 100%;
   border-radius: 50px;
   font-weight: 700;
   font-size: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.header__btn:hover {
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 .header__btn--demo {
   background: $color-secondary;
   color: $color-white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border: 2px solid $color-secondary;
 }
 
-.header__btn--demo:hover {
-  background: darken($color-secondary, 10%);
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
-}
 
 .header__btn--contact {
   background: $color-white;
   color: $color-text;
   border: 2px solid $color-primary;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-}
-
-.header__btn--contact:hover {
-  background: rgba($color-primary, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .header__btn-icon {
-  width: 71px;
-  height: 71px;
-  position: absolute;
-  left: -17px;
-  top: -11px;
-  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  max-width: 31px;
 }
 
-.header__btn-icon-svg {
-  width: 31px;
-  height: 26px;
+.header__btn--demo .header__btn-icon {
+  max-width: 71px;
+  position: absolute;
+  left: -18px;
+  top: calc(50% - 3px);
+  transform: translateY(-50%);
 }
 
 // Section
@@ -117,12 +88,24 @@
 .section--solution {
   background: rgba($color-secondary, 0.1);
   position: relative;
-  padding-top: 0;
 }
 
 .section--about {
-  background: linear-gradient(to bottom, $color-bg-light, $color-white);
+  background: $color-white;
   padding: 140px 0;
+}
+
+.section--services {
+  background: $color-white;
+  padding: 90px 0 96px;
+}
+
+.section--value {
+  background: linear-gradient(0deg, rgba(255, 152, 0, 0.08) 0.16%, #FFF 99.84%), url(./images/paragragh-bg-image.webp) lightgray -897px 0px / 224.583% 100% no-repeat, rgba(255, 184, 77, 0.20);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 0 96px;
 }
 
 .section--flow {
