@@ -11,6 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // FAQアコーディオン
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-item__question');
+    const answer = item.querySelector('.faq-item__answer');
+    
+    // 初期状態で閉じる
+    answer.style.maxHeight = '0';
+    answer.style.opacity = '0';
+    answer.style.marginTop = '0';
+    
+    item.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      
+      if (isOpen) {
+        // 閉じる
+        answer.style.maxHeight = '0';
+        answer.style.opacity = '0';
+        answer.style.marginTop = '0';
+        item.classList.remove('is-open');
+      } else {
+        // 開く
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.opacity = '1';
+        answer.style.marginTop = '40px';
+        item.classList.add('is-open');
+      }
+    });
+  });
+
   // スムーズスクロール
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

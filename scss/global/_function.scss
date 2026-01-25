@@ -2,19 +2,13 @@
 
 // ブレイクポイント
 $breakpoints: (
-  md: 800,
-  lg: 959,
-);
-
-// メディアクエリー
-$mediaquerys: (
-  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
-  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+  md: 800px,
+  lg: 959px,
 );
 
 // @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
 @mixin mq($mediaquery: md) {
-  @media #{map-get($mediaquerys, $mediaquery)} {
+  @media screen and (max-width: map-get($breakpoints, $mediaquery)) {
     @content;
   }
 }
