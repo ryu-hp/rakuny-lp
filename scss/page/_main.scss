@@ -487,7 +487,7 @@
   }
   .concern-card {
     min-height: auto;
-    padding-bottom: rem(75);
+    padding-bottom: rem(24);
   }
 }
 
@@ -1190,6 +1190,9 @@
   margin-left:auto;
 }
 @include mq(md) {
+  .section--sub-cta {
+    padding-bottom: rem(60);
+  }
   .sub-cta__main-copy {
     font-size: rem(20);
     margin-bottom: rem(30);
@@ -1275,7 +1278,7 @@
     margin-bottom: rem(52);
   }
   .value__title .section__title--logo {
-    width: calc(142 / 20 * 1em);
+    width: calc(120 / 20 * 1em);
   }
   .value-item {
     border-radius: rem(20);

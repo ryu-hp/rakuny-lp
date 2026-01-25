@@ -784,7 +784,7 @@ div#main {
   }
   .concern-card {
     min-height: auto;
-    padding-bottom: 4.6875rem;
+    padding-bottom: 1.5rem;
   }
 }
 .section--solution {
@@ -1650,6 +1650,9 @@ div#main {
 }
 
 @media screen and (max-width: 800px) {
+  .section--sub-cta {
+    padding-bottom: 3.75rem;
+  }
   .sub-cta__main-copy {
     font-size: 1.25rem;
     margin-bottom: 1.875rem;
@@ -1759,7 +1762,7 @@ div#main {
     margin-bottom: 3.25rem;
   }
   .value__title .section__title--logo {
-    width: 7.1em;
+    width: 6em;
   }
   .value-item {
     border-radius: 1.25rem;
