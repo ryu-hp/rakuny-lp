@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <meta name="description" content="RAKUNYc - 工事管理システムで施工に関わる全ての情報を一元管理">
   <meta name="keywords" content="工事管理,施工管理,RAKUNY,業務効率化">
-  <title>RAKUNY - 工事管理システム</title>
+  <title>株式会社RAKUNY</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20270126-0735">
 </head>
 <body>
   <!-- Header -->
@@ -253,7 +256,15 @@
         <div class="main-cta__movies">
           <p class="main-cta__movie-copy">プレゼント動画の一部を紹介</p>
           <div class="main-cta__movie">
-            <video id="promo-video" src="/movie/short-movie.mp4" muted playsinline></video>
+            <div class="video-wrapper">
+              <video class="promo-video" src="/movie/short-movie.mp4" muted playsinline preload="metadata" poster="/images/movie-thumbnail.webp"></video>
+              <button class="video-play-btn" aria-label="動画を再生">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <circle cx="40" cy="40" r="38" fill="white" fill-opacity="0.9" stroke="#8BC34A" stroke-width="4"/>
+                  <path d="M32 24L56 40L32 56V24Z" fill="#8BC34A"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -738,7 +749,15 @@
         <div class="main-cta__movies">
           <p class="main-cta__movie-copy">プレゼント動画の一部を紹介</p>
           <div class="main-cta__movie">
-            <video id="promo-video" src="/movie/short-movie.mp4" muted playsinline></video>
+            <div class="video-wrapper">
+              <video class="promo-video" src="/movie/short-movie.mp4" muted playsinline preload="metadata" poster="/images/movie-thumbnail.webp"></video>
+              <button class="video-play-btn" aria-label="動画を再生">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <circle cx="40" cy="40" r="38" fill="white" fill-opacity="0.9" stroke="#8BC34A" stroke-width="4"/>
+                  <path d="M32 24L56 40L32 56V24Z" fill="#8BC34A"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -758,7 +777,30 @@
     </div>
   </footer>
 
+  <div class="fix-contents">
+    <div class="fix-contents__container">
+      <div class="fix-contents__columns">
+        <div class="fix-contents__btn">
+          <a href="https://rakuny.jp/video_application.html" class="btn btn--demo">
+            <div class="btn-icon">
+              <img src="/images/sryou-1.webp" alt="送るアイコン">
+            </div>
+            <span class="btn__text btn__text--large">動画を受け取る</span>
+          </a>
+        </div>
+        <div class="fix-contents__btn">
+          <a href="https://rakuny.jp/contact.html" class="btn btn--mail">
+            <div class="btn-icon">
+              <img src="/images/mail-icon.webp" alt="メールアイコン">
+            </div>
+            <span class="btn__text btn__text--large">無料で相談する</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=20260126-0735"></script>
 </body>
 </html>

@@ -1,15 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ビデオの再生コントロール
-  const video = document.getElementById('promo-video');
-  if (video) {
-    video.addEventListener('click', function() {
-      if (this.paused) {
-        this.play();
+  const videoWrappers = document.querySelectorAll('.video-wrapper');
+  
+  videoWrappers.forEach((wrapper) => {
+    const video = wrapper.querySelector('.promo-video');
+    const playBtn = wrapper.querySelector('.video-play-btn');
+    
+    // 再生/一時停止
+    const togglePlay = () => {
+      if (video.paused) {
+        video.play();
+        playBtn.style.opacity = '0';
+        playBtn.style.pointerEvents = 'none';
       } else {
-        this.pause();
+        video.pause();
+        playBtn.style.opacity = '1';
+        playBtn.style.pointerEvents = 'auto';
       }
+    };
+    
+    video.addEventListener('click', togglePlay);
+    playBtn.addEventListener('click', togglePlay);
+    
+    // 再生終了時に再生ボタンを表示
+    video.addEventListener('ended', () => {
+      playBtn.style.opacity = '1';
+      playBtn.style.pointerEvents = 'auto';
     });
-  }
+  });
 
   // FAQアコーディオン
   const faqItems = document.querySelectorAll('.faq-item');

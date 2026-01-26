@@ -754,6 +754,35 @@
   border-radius: rem(30);
   border: rem(5) solid $color-primary;
   box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+// Video wrapper and controls
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.video-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-play-btn:active {
+  transform: translate(-50%, -50%) scale(0.95);
 }
 
 @include mq(md) {
@@ -1734,4 +1763,88 @@
   opacity: 0.6;
   line-height: 1.7;
   text-align: center;
+}
+
+.fix-contents {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  z-index: 1000;
+}
+.fix-contents__columns {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+.fix-contents__btn {
+  height: rem(221);
+}
+.fix-contents__btn .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: rem(32) rem(20) rem(16);
+  border-radius: rem(20);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.fix-contents__btn .btn__text {
+  writing-mode: vertical-rl;
+  font-size: rem(20);
+}
+.fix-contents__btn .btn-icon {
+  left: 50%;
+  transform: translateX(-50%);
+  top: rem(12);
+  max-width: rem(31);
+}
+.fix-contents__btn .btn--demo .btn-icon {
+  max-width: rem(71);
+  top: rem(-24);
+  width: 100%;
+}
+@include mq(md) {
+  .fix-contents {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(-59deg, #EEFFDE 0%, #8BC34A 67%, #8BC34A 100%);
+  }
+  .fix-contents__container {
+    padding: rem(10) $padding-sp;
+  }
+  .fix-contents__columns {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(10);
+  }
+  .fix-contents__btn {
+    max-width: rem(179);
+    width: 100%;
+    height: auto;
+  }
+  .fix-contents__btn .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: rem(5) rem(20) rem(4) rem(16);
+    border-radius: rem(50);
+  }
+  .fix-contents__btn .btn__text {
+    writing-mode: horizontal-tb;
+    font-size: rem(14);
+  }
+  .fix-contents__btn .btn-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(8);
+    max-width: rem(18);
+  }
+  .fix-contents__btn .btn--demo .btn-icon {
+    max-width: rem(40);
+    left: rem(-8);
+    top: rem(-7);
+    transform: translateY(0);
+  }
 }
